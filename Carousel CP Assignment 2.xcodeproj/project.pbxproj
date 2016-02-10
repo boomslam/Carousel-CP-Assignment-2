@@ -14,6 +14,9 @@
 		A38128D21C6AEF4A00F4B171 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A38128D01C6AEF4A00F4B171 /* LaunchScreen.storyboard */; };
 		A38128DD1C6AEF4A00F4B171 /* Carousel_CP_Assignment_2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38128DC1C6AEF4A00F4B171 /* Carousel_CP_Assignment_2Tests.swift */; };
 		A38128E81C6AEF4A00F4B171 /* Carousel_CP_Assignment_2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38128E71C6AEF4A00F4B171 /* Carousel_CP_Assignment_2UITests.swift */; };
+		A38128F61C6B09C900F4B171 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38128F51C6B09C900F4B171 /* Common.swift */; };
+		A38128F81C6B0A3C00F4B171 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38128F71C6B0A3C00F4B171 /* IntroViewController.swift */; };
+		A38128FA1C6BA55A00F4B171 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38128F91C6BA55A00F4B171 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		A38128E31C6AEF4A00F4B171 /* Carousel CP Assignment 2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Carousel CP Assignment 2UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A38128E71C6AEF4A00F4B171 /* Carousel_CP_Assignment_2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel_CP_Assignment_2UITests.swift; sourceTree = "<group>"; };
 		A38128E91C6AEF4A00F4B171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A38128F51C6B09C900F4B171 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		A38128F71C6B0A3C00F4B171 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		A38128F91C6BA55A00F4B171 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +103,12 @@
 		A38128C61C6AEF4A00F4B171 /* Carousel CP Assignment 2 */ = {
 			isa = PBXGroup;
 			children = (
+				A38128F51C6B09C900F4B171 /* Common.swift */,
 				A38128C71C6AEF4A00F4B171 /* AppDelegate.swift */,
 				A38128C91C6AEF4A00F4B171 /* ViewController.swift */,
 				A38128CB1C6AEF4A00F4B171 /* Main.storyboard */,
+				A38128F91C6BA55A00F4B171 /* LoginViewController.swift */,
+				A38128F71C6B0A3C00F4B171 /* IntroViewController.swift */,
 				A38128CE1C6AEF4A00F4B171 /* Assets.xcassets */,
 				A38128D01C6AEF4A00F4B171 /* LaunchScreen.storyboard */,
 				A38128D31C6AEF4A00F4B171 /* Info.plist */,
@@ -257,7 +266,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A38128CA1C6AEF4A00F4B171 /* ViewController.swift in Sources */,
+				A38128F61C6B09C900F4B171 /* Common.swift in Sources */,
 				A38128C81C6AEF4A00F4B171 /* AppDelegate.swift in Sources */,
+				A38128FA1C6BA55A00F4B171 /* LoginViewController.swift in Sources */,
+				A38128F81C6B0A3C00F4B171 /* IntroViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
