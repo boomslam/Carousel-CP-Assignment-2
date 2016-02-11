@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="V30-Sl-eJm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vOc-m9-epw">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -95,7 +95,7 @@
                                 <rect key="frame" x="-2" y="0.0" width="320" height="66"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="yIt-w3-2CA">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="yIt-w3-2CA" userLabel="loginScrollView">
                                 <rect key="frame" x="0.0" y="66" width="320" height="705"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -126,8 +126,12 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="qfB-dD-Irt" userLabel="Activity Indicator">
+                                        <rect key="frame" x="150" y="406" width="20" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </activityIndicatorView>
                                     <view contentMode="scaleToFill" id="jur-bd-pR3" userLabel="buttonParentView">
-                                        <rect key="frame" x="0.0" y="482" width="320" height="128"/>
+                                        <rect key="frame" x="0.0" y="298" width="320" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sign_in_buttons" id="o0S-qO-hnj">
@@ -141,10 +145,6 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="qfB-dD-Irt" userLabel="Activity Indicator">
-                                        <rect key="frame" x="150" y="406" width="20" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </activityIndicatorView>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -159,10 +159,17 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="loginScrollView" destination="yIt-w3-2CA" id="rra-AY-5Mm"/>
+                        <outlet property="buttonParentView" destination="jur-bd-pR3" id="lXn-sk-hOZ"/>
+                        <outlet property="fieldParentView" destination="dXf-3C-ZCu" id="87X-CJ-Wjx"/>
+                        <outlet property="loginScrollView" destination="yIt-w3-2CA" id="4Sg-Jl-iFg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxa-tW-R1t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="VcL-rI-sdB">
+                    <connections>
+                        <action selector="didTap:" destination="vOc-m9-epw" id="fEE-XF-ddG"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1326" y="406"/>
         </scene>
