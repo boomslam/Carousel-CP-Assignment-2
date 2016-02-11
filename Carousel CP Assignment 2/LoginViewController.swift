@@ -22,7 +22,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     
     func keyboardWillHide(notification: NSNotification!) {
         fieldParentView.frame.origin.y = initialY
-        
+         buttonParentView.frame.origin.y = buttonInitialY
     }
     
     @IBOutlet weak var fieldParentView: UIView!
@@ -60,9 +60,19 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        // If the scrollView has been scrolled down by 50px or more...
+        if scrollView.contentOffset.y <= -50 {
+            // Hide the keyboard
+            view.endEditing(true)
+        }
+    }
+    
     @IBAction func didTap(sender: AnyObject) {
         view.endEditing(true)
     }
+
 
     /*
     // MARK: - Navigation
