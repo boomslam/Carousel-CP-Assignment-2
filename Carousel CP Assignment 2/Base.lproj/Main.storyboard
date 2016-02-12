@@ -126,10 +126,6 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="qfB-dD-Irt" userLabel="Activity Indicator">
-                                        <rect key="frame" x="150" y="406" width="20" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </activityIndicatorView>
                                     <view contentMode="scaleToFill" id="jur-bd-pR3" userLabel="buttonParentView">
                                         <rect key="frame" x="0.0" y="298" width="320" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -143,8 +139,13 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <connections>
                                                     <action selector="didPressLogin:" destination="vOc-m9-epw" eventType="touchUpInside" id="kBq-Ap-8jB"/>
+                                                    <action selector="onButton:" destination="vOc-m9-epw" eventType="touchUpInside" id="vnf-bM-GwZ"/>
                                                 </connections>
                                             </button>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="qfB-dD-Irt" userLabel="Activity Indicator">
+                                                <rect key="frame" x="256" y="32" width="37" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
