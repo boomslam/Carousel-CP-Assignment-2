@@ -63,7 +63,7 @@
                                         <rect key="frame" x="21" y="1067" width="280" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
-                                            <segue destination="vOc-m9-epw" kind="push" id="jXg-VP-OdK"/>
+                                            <segue destination="vOc-m9-epw" kind="push" identifier="firstSegue" animates="NO" id="jXg-VP-OdK"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -141,6 +141,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nyL-9G-Ifm" userLabel="sign in UIButton">
                                                 <rect key="frame" x="21" y="33" width="277" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="didPressLogin:" destination="vOc-m9-epw" eventType="touchUpInside" id="kBq-Ap-8jB"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -150,7 +153,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Sign In to Dropbox" id="raj-aX-e4o">
+                    <navigationItem key="navigationItem" title="Sign In to Dropbox" id="raj-aX-e4o" userLabel="loginNavBar">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="ncY-iy-apN">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LKo-4d-O8j">
                                 <rect key="frame" x="16" y="7" width="71" height="30"/>
@@ -160,8 +163,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="buttonParentView" destination="jur-bd-pR3" id="lXn-sk-hOZ"/>
+                        <outlet property="emailField" destination="euY-Lx-6tp" id="r1q-ye-TjA"/>
                         <outlet property="fieldParentView" destination="dXf-3C-ZCu" id="87X-CJ-Wjx"/>
+                        <outlet property="loginButton" destination="nyL-9G-Ifm" id="uaW-fb-qbl"/>
+                        <outlet property="loginIndicator" destination="qfB-dD-Irt" id="pUD-nk-gyD"/>
                         <outlet property="loginScrollView" destination="yIt-w3-2CA" id="4Sg-Jl-iFg"/>
+                        <outlet property="passwordField" destination="7dM-yR-gLi" id="KMP-WH-LDc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxa-tW-R1t" userLabel="First Responder" sceneMemberID="firstResponder"/>

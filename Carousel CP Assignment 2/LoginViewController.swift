@@ -25,6 +25,12 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
          buttonParentView.frame.origin.y = buttonInitialY
     }
     
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var loginIndicator: UIActivityIndicatorView!
+    
+    
     @IBOutlet weak var fieldParentView: UIView!
     @IBOutlet weak var loginScrollView: UIScrollView!
     @IBOutlet weak var buttonParentView: UIView!
@@ -54,6 +60,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     
         // Do any additional setup after loading the view.
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -71,6 +78,31 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func didTap(sender: AnyObject) {
         view.endEditing(true)
+    }
+    
+    
+    @IBAction func didPressLogin(sender: AnyObject) {
+        loginIndicator.startAnimating()
+        loginButton.selected = true
+        if emailField.text == "q" && passwordField.text == "q" {
+            delay(2, closure: { () -> () in
+                self.loginIndicator.stopAnimating()
+                self.loginButton.selected = false
+                self.performSegueWithIdentifier("firstSegue", sender: nil)
+            })
+        } else {
+            delay(2, closure: { () -> () in
+                self.loginIndicator.stopAnimating()
+                self.loginButton.selected = false
+                // Create and Show UIAlertController...see guide, Using UIAlertController
+            })
+            let alertController = UIAlertController(title: "Email required", message: "Please enter your email.", preferredStyle: .Alert)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+            }
+            alertController.addAction(cancelAction)
+            presentViewController(alertController, animated: true) {
+            }
+        }
     }
 
 
