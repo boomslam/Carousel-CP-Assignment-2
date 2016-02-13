@@ -10,9 +10,14 @@ import UIKit
 
 class ConversationsViewController: UIViewController {
 
+    @IBOutlet weak var backButton: UIButton!
+    
+    @IBAction func backButtonAction(sender: AnyObject) {
+        navigationController?.popToRootViewControllerAnimated(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.popToRootViewControllerAnimated(true)
         
         // Do any additional setup after loading the view.
     }

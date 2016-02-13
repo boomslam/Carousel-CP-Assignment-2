@@ -261,11 +261,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="feed_nav" id="2oF-9n-U2i">
-                                <rect key="frame" x="0.0" y="64" width="320" height="65"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GJQ-Zk-4uI" userLabel="Settings Button">
+                                <rect key="frame" x="13" y="25" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="u0q-Cj-rgS" kind="modal" id="IBs-Cm-3fC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Ma-of-i3P" userLabel="Conversations Button">
+                                <rect key="frame" x="278" y="25" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="gbR-Hv-tgX" kind="push" id="bkm-s1-1eJ"/>
+                                </connections>
+                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="zX5-g2-BqO">
-                                <rect key="frame" x="0.0" y="127" width="320" height="1564"/>
+                                <rect key="frame" x="0.0" y="63" width="320" height="1564"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="feed" id="Wcn-vb-fGm">
@@ -274,20 +288,6 @@
                                     </imageView>
                                 </subviews>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GJQ-Zk-4uI" userLabel="Settings Button">
-                                <rect key="frame" x="13" y="89" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="u0q-Cj-rgS" kind="modal" id="IBs-Cm-3fC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Ma-of-i3P" userLabel="Conversations Button">
-                                <rect key="frame" x="278" y="89" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="gbR-Hv-tgX" kind="push" id="0oR-NC-9h6"/>
-                                </connections>
-                            </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="scrubber" id="xT4-V4-Rci">
                                 <rect key="frame" x="0.0" y="1530" width="320" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
@@ -328,7 +328,7 @@
         <!--Navigation Controller-->
         <scene sceneID="nFV-OP-YXN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5Ni-BS-uzW" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="5Ni-BS-uzW" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dsq-hU-sao">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -348,7 +348,7 @@
             <objects>
                 <viewController id="u0q-Cj-rgS" userLabel="Settings View Controller" customClass="SettingsViewController" customModule="Carousel_CP_Assignment_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1aq-lq-E68">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="cNm-gi-iLN">
@@ -383,7 +383,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="1568"/>
+                    <size key="freeformSize" width="320" height="568"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pYX-Co-Kue" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -398,17 +398,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="conversations" id="Fy8-vl-W1L">
-                                <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OKr-2F-WWF">
-                                <rect key="frame" x="13" y="92" width="30" height="30"/>
+                                <rect key="frame" x="8" y="20" width="36" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="backButtonAction:" destination="gbR-Hv-tgX" eventType="touchUpInside" id="hsf-HI-apq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="hfm-Ee-8lc"/>
+                    <connections>
+                        <outlet property="backButton" destination="OKr-2F-WWF" id="J1O-68-LtP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mro-g8-tpG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
