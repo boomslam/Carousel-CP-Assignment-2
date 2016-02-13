@@ -10,8 +10,16 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var settingsImageView: UIImageView!
+    @IBOutlet weak var settingsScrollView: UIScrollView!
+    
+    @IBAction func closeButton(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: {})
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        settingsScrollView.contentSize = CGSize(width: 320, height: 695)
 
         // Do any additional setup after loading the view.
     }
