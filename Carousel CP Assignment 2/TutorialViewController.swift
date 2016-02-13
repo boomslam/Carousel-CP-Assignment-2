@@ -13,12 +13,15 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var tutorialPageControl: UIPageControl!
     @IBOutlet weak var tutorialScrollView: UIScrollView!
     @IBOutlet var tutorialImageView: UIView!
+    @IBOutlet weak var buttonParentView: UIView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tutorialScrollView.delegate = self
         tutorialScrollView.contentSize = CGSize(width: 1280, height: 568)
+        buttonParentView.alpha = 0
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,6 +35,18 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
         
         // Set the current page, so the dots will update
         tutorialPageControl.currentPage = page
+        
+        if page == 3 {
+            UIView.animateWithDuration(0.3) { () -> Void in
+                self.buttonParentView.alpha = 1
+                self.tutorialPageControl.hidden = true
+        }
+        } else {
+            UIView.animateWithDuration(0.3) { () -> Void in
+                self.buttonParentView.alpha = 0
+                self.tutorialPageControl.hidden = false
+            }
+        }
     }
     
 

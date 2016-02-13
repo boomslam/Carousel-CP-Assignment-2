@@ -10,8 +10,13 @@ import UIKit
 
 class ImageTimelineViewController: UIViewController {
 
+    @IBOutlet weak var timelineScrollView: UIScrollView!
+    @IBOutlet weak var timelineImageView: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        timelineScrollView.contentSize = timelineImageView.image!.size
 
         // Do any additional setup after loading the view.
     }
