@@ -94,7 +94,6 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
             delay(2, closure: { () -> () in
                 self.loginIndicator.stopAnimating()
                 self.loginButton.selected = false
-                // Create and Show UIAlertController...see guide, Using UIAlertController
             })
             let alertController = UIAlertController(title: "Email required", message: "Please enter your email.", preferredStyle: .Alert)
             let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
