@@ -95,7 +95,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
                 self.loginIndicator.stopAnimating()
                 self.loginButton.selected = false
             })
-            let alertController = UIAlertController(title: "Email required", message: "Please enter your email.", preferredStyle: .Alert)
+            let alertController = UIAlertController(title: "Error", message: "Email and password do not match.", preferredStyle: .Alert)
             let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
             }
             alertController.addAction(cancelAction)
