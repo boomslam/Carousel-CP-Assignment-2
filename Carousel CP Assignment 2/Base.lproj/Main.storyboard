@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="jUI-vs-tB3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vOc-m9-epw">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -88,7 +88,7 @@
             <objects>
                 <viewController id="vOc-m9-epw" customClass="LoginViewController" customModule="Carousel_CP_Assignment_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9sA-qJ-J8o">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1236"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sign_in_nav_bar" id="tCt-MD-Jp8">
@@ -139,7 +139,6 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <connections>
                                                     <action selector="didPressLogin:" destination="vOc-m9-epw" eventType="touchUpInside" id="kBq-Ap-8jB"/>
-                                                    <action selector="onButton:" destination="vOc-m9-epw" eventType="touchUpInside" id="vnf-bM-GwZ"/>
                                                     <segue destination="jUI-vs-tB3" kind="modal" identifier="firstSegue" id="NhG-h5-adS"/>
                                                 </connections>
                                             </button>
@@ -163,22 +162,20 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="buttonParentView" destination="jur-bd-pR3" id="lXn-sk-hOZ"/>
                         <outlet property="emailField" destination="euY-Lx-6tp" id="r1q-ye-TjA"/>
                         <outlet property="fieldParentView" destination="dXf-3C-ZCu" id="87X-CJ-Wjx"/>
-                        <outlet property="loginButton" destination="nyL-9G-Ifm" id="uaW-fb-qbl"/>
                         <outlet property="loginIndicator" destination="qfB-dD-Irt" id="pUD-nk-gyD"/>
+                        <outlet property="loginNavBar" destination="tCt-MD-Jp8" id="Vuj-JJ-sAg"/>
                         <outlet property="loginScrollView" destination="yIt-w3-2CA" id="4Sg-Jl-iFg"/>
                         <outlet property="passwordField" destination="7dM-yR-gLi" id="KMP-WH-LDc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxa-tW-R1t" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="VcL-rI-sdB">
-                    <connections>
-                        <action selector="didTap:" destination="vOc-m9-epw" id="fEE-XF-ddG"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="VcL-rI-sdB"/>
             </objects>
             <point key="canvasLocation" x="1326" y="406"/>
         </scene>
