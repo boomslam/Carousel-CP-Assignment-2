@@ -1,4 +1,4 @@
-# Carousel-CP-Assignment-2
+# Carousel - CodePath Assignment 2
 
 Codepath week 2 assignment 
 
