@@ -128,12 +128,21 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     
     func keyboardWillHide(notification: NSNotification!) {
         buttonParentView.frame.origin.y = buttonInitialY
+        
     }
     
     func loginScrollViewDidScroll(scrollView: UIScrollView) {
         if loginScrollView.contentOffset.y <= -50{
             view.endEditing(true)
             
+        }
+    }
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        // If the scrollView has been scrolled down by 50px or more...
+        if scrollView.contentOffset.y <= -50 {
+            // Hide the keyboard
+            view.endEditing(true)
         }
     }
     

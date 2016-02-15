@@ -22,13 +22,13 @@
         <!--Intro View Controller-->
         <scene sceneID="paa-on-aqM">
             <objects>
-                <viewController id="GIl-Hk-zST" customClass="IntroViewController" customModule="Carousel_CP_Assignment_2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="GIl-Hk-zST" customClass="IntroViewController" customModule="Carousel_CP_Assignment_2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="139-nL-4fD">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1236"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1298"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="6Rc-Sk-xTx">
-                                <rect key="frame" x="0.0" y="62" width="320" height="1174"/>
+                                <rect key="frame" x="0.0" y="62" width="320" height="1298"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro" id="Va8-pW-zxU">
@@ -36,27 +36,27 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile1" id="vat-ix-4sh">
-                                        <rect key="frame" x="46" y="741" width="153" height="152"/>
+                                        <rect key="frame" x="46" y="742" width="153" height="152"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile2" id="iw0-ed-LhT">
-                                        <rect key="frame" x="200" y="741" width="76" height="75"/>
+                                        <rect key="frame" x="200" y="742" width="76" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile3" id="DeM-2f-BbI">
-                                        <rect key="frame" x="200" y="819" width="76" height="76"/>
+                                        <rect key="frame" x="200" y="820" width="76" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile6" id="C16-uw-1nV">
-                                        <rect key="frame" x="200" y="897" width="76" height="75"/>
+                                        <rect key="frame" x="200" y="898" width="76" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile5" id="XCF-bN-iAL">
-                                        <rect key="frame" x="122" y="897" width="76" height="75"/>
+                                        <rect key="frame" x="122" y="898" width="76" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="intro_tile4" id="hys-kw-9wv">
-                                        <rect key="frame" x="46" y="896" width="76" height="76"/>
+                                        <rect key="frame" x="46" y="897" width="76" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YXH-4O-QSB">
@@ -73,8 +73,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="G4n-gp-VZL"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="1236"/>
+                    <size key="freeformSize" width="320" height="1298"/>
                     <connections>
+                        <outlet property="image1" destination="vat-ix-4sh" id="7K6-X2-0AR"/>
+                        <outlet property="image2" destination="iw0-ed-LhT" id="AFg-iN-bBf"/>
+                        <outlet property="image3" destination="DeM-2f-BbI" id="9VK-LD-YQd"/>
+                        <outlet property="image4" destination="C16-uw-1nV" id="vqI-zn-gST"/>
+                        <outlet property="image5" destination="XCF-bN-iAL" id="rpF-cW-B4M"/>
+                        <outlet property="image6" destination="hys-kw-9wv" id="lY8-pB-70n"/>
                         <outlet property="introImageView" destination="Va8-pW-zxU" id="3hH-uo-09y"/>
                         <outlet property="introScrollView" destination="6Rc-Sk-xTx" id="ejr-O5-Fdv"/>
                     </connections>
@@ -111,13 +117,13 @@
                                                 <rect key="frame" x="0.0" y="84" width="320" height="113"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </imageView>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="euY-Lx-6tp" userLabel="Email Field">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" id="euY-Lx-6tp" userLabel="Email Field">
                                                 <rect key="frame" x="16" y="103" width="288" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="7dM-yR-gLi" userLabel="Password Field">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="7dM-yR-gLi" userLabel="Password Field">
                                                 <rect key="frame" x="16" y="148" width="288" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -134,18 +140,17 @@
                                                 <rect key="frame" x="0.0" y="12" width="320" height="104"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nyL-9G-Ifm" userLabel="sign in UIButton">
-                                                <rect key="frame" x="21" y="33" width="277" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <connections>
-                                                    <action selector="didPressLogin:" destination="vOc-m9-epw" eventType="touchUpInside" id="kBq-Ap-8jB"/>
-                                                    <segue destination="jUI-vs-tB3" kind="modal" identifier="firstSegue" id="NhG-h5-adS"/>
-                                                </connections>
-                                            </button>
                                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="qfB-dD-Irt" userLabel="Activity Indicator">
                                                 <rect key="frame" x="256" y="32" width="37" height="37"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </activityIndicatorView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nyL-9G-Ifm" userLabel="sign in UIButton">
+                                                <rect key="frame" x="22" y="32" width="277" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="didPressLogin:" destination="vOc-m9-epw" eventType="touchUpInside" id="kBq-Ap-8jB"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -172,6 +177,7 @@
                         <outlet property="loginNavBar" destination="tCt-MD-Jp8" id="Vuj-JJ-sAg"/>
                         <outlet property="loginScrollView" destination="yIt-w3-2CA" id="4Sg-Jl-iFg"/>
                         <outlet property="passwordField" destination="7dM-yR-gLi" id="KMP-WH-LDc"/>
+                        <segue destination="jUI-vs-tB3" kind="modal" identifier="firstSegue" id="ROH-fi-gBS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxa-tW-R1t" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -306,7 +312,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Zkk-Ef-rUE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="V30-Sl-eJm" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="V30-Sl-eJm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="e3L-yY-iak">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
