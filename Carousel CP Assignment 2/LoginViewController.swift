@@ -36,7 +36,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         
         buttonInitialY = buttonParentView.frame.origin.y
-        buttonOffset = -5
+        buttonOffset = -120
         
         loginScrollView.contentSize = loginScrollView.frame.size
         loginScrollView.contentInset.bottom = 100
@@ -84,7 +84,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func didPressLogin(sender: AnyObject) {
         loginIndicator.startAnimating()
-        
+        print(emailField)
         if emailField.text!.isEmpty || passwordField.text!.isEmpty{
             
             let alertController  = UIAlertController(title: "Email Required", message: "Please try again.", preferredStyle: .Alert)
@@ -95,7 +95,8 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
             presentViewController(alertController, animated: true){
             }
             self.loginIndicator.stopAnimating()
-        }else if emailField.text == "q" && passwordField.text == "q"{
+        } else
+            if emailField.text == "q" && passwordField.text == "q"{
             delay(2, closure: { () -> () in
                 self.loginIndicator.stopAnimating()
                 self.performSegueWithIdentifier("firstSegue", sender: nil)
@@ -109,9 +110,9 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
                 let cancelAction = UIAlertAction(title: "OK", style: .Cancel) { (action) in
                 }
                 failController.addAction(cancelAction)
-                self.presentViewController(failController, animated: true){
+                self.presentViewController(failController, animated: true){ print("test2")
                 }
-                
+    
                 
             })
             
