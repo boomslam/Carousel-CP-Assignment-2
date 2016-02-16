@@ -2,7 +2,7 @@
 
 Codepath week 2 assignment 
 
-Hours: 10
+Hours: 12
 
 Description: 
 Carousel sign in flow prototype.
